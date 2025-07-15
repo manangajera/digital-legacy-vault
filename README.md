@@ -42,6 +42,14 @@ A secure platform where users can store sensitive documents (like property paper
 
 ---
 
+
+## 📁 Folder Structure
+
+- `/backend` - Complete backend source code
+- `/frontend` - Placeholder folder (not maintained)
+
+> ⚠️ This project focuses only on backend functionality. The frontend is not implemented.
+
 ## 📁 Project Structure
 
 ```
