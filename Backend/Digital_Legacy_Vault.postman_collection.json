@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Digital Legacy Vault (Cookie Auth)",
+    "_postman_id": "98765432-4321-8765-4321-987654321098",
+    "description": "Postman collection for testing Digital Legacy Vault APIs using cookie-based authentication",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User - Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"9876543210\",\n  \"password\": \"securepassword\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/user/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "user",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "User - Login (Set-Cookie)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"securepassword\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/user/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "user",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "User - Profile (Cookie Session)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/user/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "user",
+            "profile"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Nominee - Add",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Nominee\",\n  \"email\": \"jane@example.com\",\n  \"phone\": \"9123456789\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/user/nominees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "user",
+            "nominees"
+          ]
+        }
+      }
+    },
+    {
+      "name": "File - Upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/file/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "file",
+            "upload"
+          ]
+        }
+      }
+    },
+    {
+      "name": "File - Get All Files",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/file/allFiles",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "file",
+            "allFiles"
+          ]
+        }
+      }
+    }
+  ]
+}
